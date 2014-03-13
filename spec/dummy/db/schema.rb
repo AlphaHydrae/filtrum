@@ -23,4 +23,22 @@ ActiveRecord::Schema.define(version: 20140313194645) do
 
   add_index "books", ["title"], name: "index_books_on_title", unique: true
 
+  create_table "books_genres", id: false, force: true do |t|
+    t.integer "book_id",  null: false
+    t.integer "genre_id", null: false
+  end
+
+  add_index "books_genres", ["book_id", "genre_id"], name: "index_books_genres_on_book_id_and_genre_id", unique: true
+
+  create_table "genres", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "first_name", null: false
+    t.string   "last_name",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
