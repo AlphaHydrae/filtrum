@@ -1,8 +1,7 @@
-require 'spec_helper'
-
 describe "Version" do
+  let(:version){ File.read File.expand_path('../../VERSION', __FILE__) }
+
   it "should be correct" do
-    version_file = File.expand_path '../../VERSION', __FILE__
-    Filtrum::VERSION.should == File.open(version_file, 'r').read
+    expect(Filtrum::VERSION).to eq(version)
   end
 end

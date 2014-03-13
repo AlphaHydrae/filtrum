@@ -1,4 +1,3 @@
-#!/usr/bin/env rake
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -16,4 +15,4 @@ RakeVersion::Tasks.new do |v|
   v.copy 'lib/filtrum/version.rb'
 end
 
-task :default => :spec
+task default: :spec

@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.name        = "filtrum"
   s.version     = Filtrum::VERSION
   s.authors     = ["Simon Oulevay"]
-  s.email       = ["hydrae.alpha@gmail.com"]
+  s.email       = ["simon.oulevay@gmail.com"]
   s.homepage    = "https://github.com/AlphaHydrae/filtrum"
   s.summary     = "Active record filtering and serialization utilities."
   s.description = "Active record extensions to filter and serialize active record models."
   s.licenses    = ["MIT"]
 
-  s.files = Dir["{lib}/**/*"] + Dir["{vendor}/**/*"] + ["LICENSE.txt", "README.md", "VERSION"]
+  s.files = Dir["{lib}/**/*", "LICENSE.txt", "README.md", "VERSION"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.0"
